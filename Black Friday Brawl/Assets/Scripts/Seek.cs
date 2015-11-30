@@ -64,5 +64,16 @@ public class Seek : MonoBehaviour
         }
     }
 
+    public void SetColour(Color colour)
+    {
+        Transform shader = gameObject.transform.Find("ninja 1");
+        Renderer rend = shader.GetComponent<Renderer>();
+
+        rend.material.color = colour;
+
+       //rend.material.shader = Shader.Find("lambert2");
+       //rend.material.SetColor("_Color", colour);
+    }
+
 
 }

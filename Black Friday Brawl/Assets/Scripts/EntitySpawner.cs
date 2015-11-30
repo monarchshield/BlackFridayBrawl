@@ -14,12 +14,7 @@ public class EntitySpawner : MonoBehaviour
     private int _entityCountAmount;
 
 
-    public GameObject _redAgent;
-    public GameObject _blueAgent;
-    public GameObject _pinkAgent;
-    public GameObject _orangeAgent;
-
-
+    public GameObject _Agent;
 
 	// Use this for initialization
 	void Start () 
@@ -41,41 +36,42 @@ public class EntitySpawner : MonoBehaviour
         if(_timer < 0 && _entityCountAmount <= _totalamount)
         {
             _timer = _spawnrateseconds;
-            int rand = Random.Range(0, 3);
+            int rand = Random.Range(0, 4);
 
+            GameObject obj = (GameObject)Instantiate(_Agent, transform.position, Quaternion.identity);
+            Seek headingloc = obj.GetComponent<Seek>();
+            headingloc.SetStartLocation(transform.position);
+            
             switch (rand)
             {
+
                 case 0:
                 {
-                    GameObject obj = (GameObject)Instantiate(_redAgent, transform.position, Quaternion.identity);
-                    Seek headingloc = obj.GetComponent<Seek>();
-                    headingloc.SetStartLocation(transform.position);
+                    headingloc.SetColour(Color.red);
+                    Debug.Log("Red");
                 }
                break;
 
                case 1:
                {
-                   GameObject obj = (GameObject)Instantiate(_blueAgent, transform.position, Quaternion.identity);
-                   Seek headingloc = obj.GetComponent<Seek>();
-                   headingloc.SetStartLocation(transform.position);
+                   headingloc.SetColour(Color.blue);
+                   Debug.Log("Blue");
                } 
                break;
 
                 case 2:
                {
-                   GameObject obj = (GameObject)Instantiate(_pinkAgent, transform.position, Quaternion.identity);
-                   Seek headingloc = obj.GetComponent<Seek>();
-                   headingloc.SetStartLocation(transform.position);
+                   headingloc.SetColour(Color.green);
+                   Debug.Log("Green");
                } 
                break;
 
-                case 3:
-                {
-                   GameObject obj = (GameObject)Instantiate(_orangeAgent, transform.position, Quaternion.identity);
-                   Seek headingloc = obj.GetComponent<Seek>();
-                   headingloc.SetStartLocation(transform.position);
-                } 
-                break;
+               case 3:
+               {
+                   headingloc.SetColour(Color.magenta);
+                   Debug.Log("Magenta");
+               } 
+               break;
 
                 default:
                     Debug.Log("Fix it felix");
