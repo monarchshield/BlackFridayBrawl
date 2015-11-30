@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: 511c5d500a4f2ed4e96649d5748179d6
+timeCreated: 1448855438
+licenseType: Free
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: head_top
+    100002: joint21
+    100004: joint22
+    100006: joint24
+    100008: joint25
+    100010: joint27
+    100012: joint28
+    100014: joint29
+    100016: joint30
+    100018: joint31
+    100020: joint32
+    100022: joint33
+    100024: joint34
+    100026: joint35
+    100028: left_ankle
+    100030: left_clavice
+    100032: left_elbow
+    100034: left_foot
+    100036: left_hand
+    100038: left_hip
+    100040: left_knee
+    100042: left_shoulder
+    100044: left_thumb
+    100046: left_toe
+    100048: left_wrist
+    100050: neck
+    100052: //RootNode
+    100054: ninja 1
+    100056: right_ankle
+    100058: right_clavice
+    100060: right_foot
+    100062: right_hip
+    100064: right_knee
+    100066: right_toe
+    100068: root
+    100070: spine01
+    100072: spine02
+    100074: spine03
+    400000: head_top
+    400002: joint21
+    400004: joint22
+    400006: joint24
+    400008: joint25
+    400010: joint27
+    400012: joint28
+    400014: joint29
+    400016: joint30
+    400018: joint31
+    400020: joint32
+    400022: joint33
+    400024: joint34
+    400026: joint35
+    400028: left_ankle
+    400030: left_clavice
+    400032: left_elbow
+    400034: left_foot
+    400036: left_hand
+    400038: left_hip
+    400040: left_knee
+    400042: left_shoulder
+    400044: left_thumb
+    400046: left_toe
+    400048: left_wrist
+    400050: neck
+    400052: //RootNode
+    400054: ninja 1
+    400056: right_ankle
+    400058: right_clavice
+    400060: right_foot
+    400062: right_hip
+    400064: right_knee
+    400066: right_toe
+    400068: root
+    400070: spine01
+    400072: spine02
+    400074: spine03
+    4300000: ninja
+    7400000: Running
+    9500000: //RootNode
+    13700000: ninja 1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Running
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 62
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: ninja 1
+        weight: 1
+      - path: root
+        weight: 1
+      - path: root/left_hip
+        weight: 1
+      - path: root/left_hip/left_knee
+        weight: 1
+      - path: root/left_hip/left_knee/left_ankle
+        weight: 1
+      - path: root/left_hip/left_knee/left_ankle/left_foot
+        weight: 1
+      - path: root/left_hip/left_knee/left_ankle/left_foot/left_toe
+        weight: 1
+      - path: root/right_hip
+        weight: 1
+      - path: root/right_hip/right_knee
+        weight: 1
+      - path: root/right_hip/right_knee/right_ankle
+        weight: 1
+      - path: root/right_hip/right_knee/right_ankle/right_foot
+        weight: 1
+      - path: root/right_hip/right_knee/right_ankle/right_foot/right_toe
+        weight: 1
+      - path: root/spine01
+        weight: 1
+      - path: root/spine01/spine02
+        weight: 1
+      - path: root/spine01/spine02/spine03
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder/left_elbow
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder/left_elbow/left_wrist
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder/left_elbow/left_wrist/left_hand
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder/left_elbow/left_wrist/left_hand/joint21
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder/left_elbow/left_wrist/left_hand/joint21/joint22
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder/left_elbow/left_wrist/left_thumb
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder/left_elbow/left_wrist/left_thumb/joint24
+        weight: 1
+      - path: root/spine01/spine02/spine03/left_clavice/left_shoulder/left_elbow/left_wrist/left_thumb/joint24/joint25
+        weight: 1
+      - path: root/spine01/spine02/spine03/neck
+        weight: 1
+      - path: root/spine01/spine02/spine03/neck/head_top
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27/joint28
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27/joint28/joint29
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27/joint28/joint29/joint30
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27/joint28/joint29/joint30/joint31
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27/joint28/joint29/joint30/joint31/joint32
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27/joint28/joint29/joint33
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27/joint28/joint29/joint33/joint34
+        weight: 1
+      - path: root/spine01/spine02/spine03/right_clavice/joint27/joint28/joint29/joint33/joint34/joint35
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
