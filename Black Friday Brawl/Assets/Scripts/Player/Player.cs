@@ -26,10 +26,28 @@ public class Player : MonoBehaviour
 
 
 	// Use this for initialization
-	void Start () 
+	void Start ()
     {
-	
-	}
+        #region SetTeamColour
+        switch (_teamcolour)
+        {
+            case TeamColour.RED:
+                SetColour(Color.red);
+                break;
+            case TeamColour.BLUE:
+                SetColour(Color.blue);
+                break;
+            case TeamColour.GREEN:
+                SetColour(Color.green);
+                break;
+            case TeamColour.PINK:
+                SetColour(Color.magenta);
+                break;
+            default:
+                break;
+        }
+        #endregion
+    }
 	
 	// Update is called once per frame
 	void Update () 
@@ -97,4 +115,13 @@ public class Player : MonoBehaviour
             Debug.Log("Dropped/Removed Iteam");
         }
     }
+
+    public void SetColour(Color colour)
+    {
+        Transform shader = gameObject.transform.Find("ninja 1");
+        Renderer rend = shader.GetComponent<Renderer>();
+
+        rend.material.color = colour;
+    }
+
 }

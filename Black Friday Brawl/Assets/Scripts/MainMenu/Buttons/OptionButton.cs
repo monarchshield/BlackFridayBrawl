@@ -8,7 +8,7 @@ public class OptionButton : MonoBehaviour
     GameObject _frontscreen;
    
 	// Use this for initialization
-	void Awake () 
+	void Start () 
     {
         _lobby = GameObject.Find("Lobby");
         _lobby.SetActive(false);

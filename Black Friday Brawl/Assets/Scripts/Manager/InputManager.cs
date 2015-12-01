@@ -34,6 +34,8 @@ public class InputManager : MonoBehaviour
 	void Start ()
     {
         _amountOfPlayers = PlayerPrefs.GetInt("PlayerAmount");
+        Debug.Log("The Amount of players in the scene" + _amountOfPlayers.ToString());
+
         SetActivePlayers();
 
         _P1Component = _P1Prefab.GetComponent<Player>();
