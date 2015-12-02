@@ -6,7 +6,7 @@ public enum TeamColour
     RED,
     BLUE,
     GREEN,
-    PINK
+    YELLOW
 };
 
 
@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     public int _health;
     public int _attackstrength;
 
-    private bool _isCarryingObject;
+    public bool _isCarryingObject;
     private float _iteamweight;
 
 
@@ -40,8 +40,8 @@ public class Player : MonoBehaviour
             case TeamColour.GREEN:
                 SetColour(Color.green);
                 break;
-            case TeamColour.PINK:
-                SetColour(Color.magenta);
+            case TeamColour.YELLOW:
+                SetColour(Color.yellow);
                 break;
             default:
                 break;
@@ -78,7 +78,23 @@ public class Player : MonoBehaviour
     /// <param name="Direction"></param>
     public void MoveInDirection(Vector3 Direction)
     {
-        transform.position += Direction * _movespeed * Time.deltaTime;
+            Vector3 NewDirection = (Direction * _movespeed * Time.deltaTime);
+            Debug.Log("The Current Direction" + NewDirection.ToString());
+            transform.position += NewDirection;
+
+
+            Vector3 NewPosition = transform.position + NewDirection;
+
+
+            if (Direction != Vector3.zero)
+            {
+                Vector3 relativePos = transform.position - NewPosition;
+                Quaternion rotation = Quaternion.LookRotation(-relativePos);
+                transform.rotation = rotation;
+            }
+
+            transform.position += NewDirection;
+
     }
 
     /// <Pick up Iteam Summary>

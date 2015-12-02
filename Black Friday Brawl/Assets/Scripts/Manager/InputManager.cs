@@ -35,7 +35,6 @@ public class InputManager : MonoBehaviour
     {
         _amountOfPlayers = PlayerPrefs.GetInt("PlayerAmount");
         Debug.Log("The Amount of players in the scene" + _amountOfPlayers.ToString());
-
         SetActivePlayers();
 
         _P1Component = _P1Prefab.GetComponent<Player>();
@@ -47,7 +46,8 @@ public class InputManager : MonoBehaviour
 	
 	// Update is called once per frame
 	void Update () 
-    {
+    {  
+       
         Player1Input();
         Player2Input();
         Player3Input();
@@ -58,9 +58,11 @@ public class InputManager : MonoBehaviour
     {
         if(_P1Active)
         {
-            float xAxis = Input.GetAxis("P1MoveXaxis");
-            float yAxis = Input.GetAxis("P1MoveYaxis");
-            _P1Component.MoveInDirection(new Vector3(xAxis, 0, yAxis));
+           
+                //P1MoveXaxis
+
+            Vector3 Direction = new Vector3(Input.GetAxis("P1MoveXaxis"), 0, Input.GetAxis("P1MoveYaxis"));
+            _P1Component.MoveInDirection(Direction);
 
 
             if (Input.GetButtonDown("P1Attack"))
@@ -76,9 +78,8 @@ public class InputManager : MonoBehaviour
     {
         if (_P2Active)
         {
-            float xAxis = Input.GetAxis("P2MoveXaxis");
-            float yAxis = Input.GetAxis("P2MoveYaxis");
-            _P2Component.MoveInDirection(new Vector3(xAxis, 0, yAxis));
+            Vector3 Direction = new Vector3(Input.GetAxis("P2MoveXaxis"), 0, Input.GetAxis("P2MoveYaxis"));
+            _P2Component.MoveInDirection(Direction);
 
 
             if (Input.GetButtonDown("P2Attack"))
@@ -94,9 +95,8 @@ public class InputManager : MonoBehaviour
     {
         if (_P3Active)
         {
-            float xAxis = Input.GetAxis("P3MoveXaxis");
-            float yAxis = Input.GetAxis("P3MoveYaxis");
-            _P3Component.MoveInDirection(new Vector3(xAxis, 0, yAxis));
+            Vector3 Direction = new Vector3(Input.GetAxis("P3MoveXaxis"), 0, Input.GetAxis("P3MoveYaxis"));
+            _P3Component.MoveInDirection(Direction);
 
 
             if (Input.GetButtonDown("P3Attack"))
@@ -112,9 +112,8 @@ public class InputManager : MonoBehaviour
     {
         if (_P4Active)
         {
-            float xAxis = Input.GetAxis("P4MoveXaxis");
-            float yAxis = Input.GetAxis("P4MoveYaxis");
-            _P4Component.MoveInDirection(new Vector3(xAxis, 0, yAxis));
+            Vector3 Direction = new Vector3(Input.GetAxis("P4MoveXaxis"), 0, Input.GetAxis("P4MoveYaxis"));
+            _P4Component.MoveInDirection(Direction);
 
 
             if (Input.GetButtonDown("P4Attack"))
@@ -134,6 +133,7 @@ public class InputManager : MonoBehaviour
     {
         _P1Active = true;
         _P2Active = true;
+        _P1Prefab.SetActive(true);
 
         switch (_amountOfPlayers)
         {
