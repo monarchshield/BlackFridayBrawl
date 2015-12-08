@@ -27,7 +27,7 @@ public class Iteam : MonoBehaviour
     public void SetColour()
     {
         Renderer rend = GetComponent<Renderer>();
-        rend.material.color = Color.red;
+        rend.material.color = Color.magenta;
     }
 
     public int GetScoreValue() { return _scorevalue; }

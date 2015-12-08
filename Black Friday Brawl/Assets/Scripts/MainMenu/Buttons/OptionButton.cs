@@ -41,7 +41,7 @@ public class OptionButton : MonoBehaviour
 
     public void TwoPlayerMatch()
     {
-        int amountOfPlayers = PlayerPrefs.GetInt("PlayerAmount");
+  
         PlayerPrefs.SetInt("PlayerAmount", 2);
         Application.LoadLevel(1);
 
@@ -50,7 +50,7 @@ public class OptionButton : MonoBehaviour
 
     public void ThreePlayerMatch()
     {
-        int amountOfPlayers = PlayerPrefs.GetInt("PlayerAmount");
+
         PlayerPrefs.SetInt("PlayerAmount", 3);
         Application.LoadLevel(1);
         return;
@@ -58,7 +58,7 @@ public class OptionButton : MonoBehaviour
 
     public void FourPlayerMatch()
     {
-        int amountOfPlayers = PlayerPrefs.GetInt("PlayerAmount");
+        
         PlayerPrefs.SetInt("PlayerAmount", 4);
         Application.LoadLevel(1);
         return;
