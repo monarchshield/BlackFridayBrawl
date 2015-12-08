@@ -62,6 +62,8 @@ public class InputManager : MonoBehaviour
                 //P1MoveXaxis
 
             Vector3 Direction = new Vector3(Input.GetAxis("P1MoveXaxis"), 0, Input.GetAxis("P1MoveYaxis"));
+
+            if(Direction != Vector3.zero)
             _P1Component.MoveInDirection(Direction);
 
 
@@ -79,6 +81,8 @@ public class InputManager : MonoBehaviour
         if (_P2Active)
         {
             Vector3 Direction = new Vector3(Input.GetAxis("P2MoveXaxis"), 0, Input.GetAxis("P2MoveYaxis"));
+
+            if (Direction != Vector3.zero)
             _P2Component.MoveInDirection(Direction);
 
 
@@ -96,6 +100,8 @@ public class InputManager : MonoBehaviour
         if (_P3Active)
         {
             Vector3 Direction = new Vector3(Input.GetAxis("P3MoveXaxis"), 0, Input.GetAxis("P3MoveYaxis"));
+            
+            if (Direction != Vector3.zero)
             _P3Component.MoveInDirection(Direction);
 
 
@@ -113,6 +119,8 @@ public class InputManager : MonoBehaviour
         if (_P4Active)
         {
             Vector3 Direction = new Vector3(Input.GetAxis("P4MoveXaxis"), 0, Input.GetAxis("P4MoveYaxis"));
+
+            if (Direction != Vector3.zero)
             _P4Component.MoveInDirection(Direction);
 
 

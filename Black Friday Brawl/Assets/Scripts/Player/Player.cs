@@ -23,11 +23,13 @@ public class Player : MonoBehaviour
 
     public bool _isCarryingObject;
     private float _iteamweight;
-
+    private Animator _Animator;
 
 	// Use this for initialization
 	void Start ()
     {
+        _Animator = GetComponent<Animator>();
+
         #region SetTeamColour
         switch (_teamcolour)
         {
@@ -69,6 +71,8 @@ public class Player : MonoBehaviour
         }
 
         Debug.Log("Cannot Attack, Holding Iteam");
+
+        _Animator.SetTrigger("IsPunching");
     }
 
     /// <Move Direction summary>
@@ -95,6 +99,7 @@ public class Player : MonoBehaviour
 
             transform.position += NewDirection;
 
+            _Animator.SetTrigger("IsRunning");
     }
 
     /// <Pick up Iteam Summary>
@@ -134,7 +139,7 @@ public class Player : MonoBehaviour
 
     public void SetColour(Color colour)
     {
-        Transform shader = gameObject.transform.Find("ninja 1");
+        Transform shader = gameObject.transform.Find("body3");
         Renderer rend = shader.GetComponent<Renderer>();
 
         rend.material.color = colour;
