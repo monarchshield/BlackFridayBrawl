@@ -141,7 +141,7 @@ public class InputManager : MonoBehaviour
     {
         _P1Active = true;
         _P2Active = true;
-        _P1Prefab.SetActive(true);
+
 
         switch (_amountOfPlayers)
         {
